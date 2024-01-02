@@ -9,7 +9,7 @@ import grid4 from '../Assets/4x4.png';
 
 function Products({ appliedFilters }) {
 
-  const [itemsPerPage, setItemsPerPage] = useState(8);
+  const itemsPerPage = 10;
   const [currentPage, setCurrentPage] = useState(1);
 
   const shoes = [{
@@ -273,17 +273,14 @@ function Products({ appliedFilters }) {
 
   const switchTo2x2Grid = () => {
     setGridColumns('repeat(auto-fill, minmax(500px, 1fr))');
-    setItemsPerPage(8)
   };
   
   const switchTo3x3Grid = () => {
     setGridColumns('repeat(auto-fill, minmax(400px, 1fr))');
-    setItemsPerPage(9);
   };
 
   const switchTo4x4Grid = () => {
     setGridColumns('repeat(auto-fill, minmax(250px, 1fr))');
-    setItemsPerPage(12);
   };
 
   const handlePageChange = (page) => {
