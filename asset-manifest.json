@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Nike_Shoes/static/css/main.6fa9814c.css",
+    "main.js": "/Nike_Shoes/static/js/main.6bfa28f1.js",
+    "static/media/banner.jpg": "/Nike_Shoes/static/media/banner.90cc2bdd1f8ddc2d1672.jpg",
+    "static/media/3x3.png": "/Nike_Shoes/static/media/3x3.7f9bcde28763b14696b9.png",
+    "static/media/2x2.png": "/Nike_Shoes/static/media/2x2.883aa3234fe3564661d1.png",
+    "index.html": "/Nike_Shoes/index.html",
+    "main.6fa9814c.css.map": "/Nike_Shoes/static/css/main.6fa9814c.css.map",
+    "main.6bfa28f1.js.map": "/Nike_Shoes/static/js/main.6bfa28f1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6fa9814c.css",
+    "static/js/main.6bfa28f1.js"
+  ]
+}
