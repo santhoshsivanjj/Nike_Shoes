@@ -282,7 +282,7 @@ function Products({ appliedFilters }) {
   };
 
   const switchTo4x4Grid = () => {
-    setGridColumns('repeat(auto-fill, minmax(300px, 1fr))');
+    setGridColumns('repeat(auto-fill, minmax(250px, 1fr))');
     setItemsPerPage(12);
   };
 
@@ -308,7 +308,7 @@ function Products({ appliedFilters }) {
   const currentShoes = filteredShoes.slice(startIndex, endIndex);
 
 
-  const [gridColumns, setGridColumns] = useState('repeat(auto-fill, minmax(300px, 1 fr))');
+  const [gridColumns, setGridColumns] = useState('repeat(auto-fill, minmax(400px, 1 fr))');
   
 
   // Map through the filtered products
