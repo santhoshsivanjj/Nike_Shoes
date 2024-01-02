@@ -1,0 +1,84 @@
+.Card{
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 5px 0px grey;
+    min-height: 300px;
+}
+.ProductImage{
+    max-width: 50%;
+}
+.ProductPrice{
+    font-family: sans-serif;
+    padding: 5px;
+    font-size: x-large;
+}
+.ProductSize{
+    font-family: sans-serif;
+    padding: 5px;
+    font-size: x-large;
+}
+.ProductTitle{
+    font-family: sans-serif;
+    padding: 15px;
+    font-size: x-large;
+}
+.Price{
+    font-size: large;
+}
+.ProductCard{
+    text-align: center;
+}
+.grid-icons > img{
+    width: 50px;
+    margin: 40px 40px 40px 40px;
+    cursor: pointer;
+}
+.ProductsList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 30px;
+    justify-content: center;
+}
+.grid-icons{
+    text-align: center;
+    padding: 0 20px;
+}
+
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+}
+  
+.pagination button {
+    margin: 0 5px;
+    padding: 8px;
+    width: 40px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: large;
+}
+
+.pagination button:hover {
+    background-color: #b8b8b8;
+    color: black;
+    border-color: #e2e2e2;
+}
+  
+  
+.pagination button.active {
+    background-color: #ae7736;
+    color: #fff;
+    border-color: #ae7736;
+}
+  

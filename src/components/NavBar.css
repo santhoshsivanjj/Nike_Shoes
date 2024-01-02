@@ -1,0 +1,25 @@
+.Nav{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 10px 10px 15px 5px grey;;   
+}
+
+.container{
+    margin-bottom: 90px;
+}
+
+.Nav > p{
+    margin: 15px;
+}
+.Banner{
+    height: 245px;
+    overflow: hidden;
+}
+.BannerImage{
+    width: 100%;
+    object-fit: cover;
+}
+
