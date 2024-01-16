@@ -34,11 +34,7 @@
 .ProductCard{
     text-align: center;
 }
-.grid-icons > img{
-    width: 50px;
-    margin: 40px 40px 40px 40px;
-    cursor: pointer;
-}
+
 .ProductsList {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -46,11 +42,6 @@
     padding: 0 30px;
     justify-content: center;
 }
-.grid-icons{
-    text-align: center;
-    padding: 0 20px;
-}
-
 
 
 .pagination {
@@ -81,4 +72,41 @@
     color: #fff;
     border-color: #ae7736;
 }
+
+.total-products{
+    font-size:larger;
+    padding: 30px 20px;
+}
+
+.Grid2.selected {
+    border: 2px solid blue; /* Add your selected grid styling here */
+  }
   
+  .Grid3.selected {
+    border: 2px solid blue; /* Add your selected grid styling here */
+  }
+  
+  .Grid4.selected {
+    border: 2px solid blue; /* Add your selected grid styling here */
+  }
+.Grid2{
+    width: 70px;
+}
+.Grid3{
+    width: 69px;
+}
+.Grid4{
+    width: 83px;
+    margin-top: -6px;
+    position: absolute;
+    
+}
+.grid-icons{
+    text-align: center;
+    place-self: center;
+}
+.grid-icons > img{
+    cursor: pointer;
+    margin-left: 40px;
+    margin-right: 40px;
+}

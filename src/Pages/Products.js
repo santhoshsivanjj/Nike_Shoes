@@ -271,17 +271,22 @@ function Products({ appliedFilters }) {
     }
   ];
 
+  const [selectedGrid, setSelectedGrid] = useState('Grid3'); // Default selected grid
+
   const switchTo2x2Grid = () => {
     setGridColumns('repeat(auto-fill, minmax(500px, 1fr))');
+    setSelectedGrid('Grid2');
   };
-  
+
   const switchTo3x3Grid = () => {
     setGridColumns('repeat(auto-fill, minmax(400px, 1fr))');
+    setSelectedGrid('Grid3');
   };
 
   const switchTo4x4Grid = () => {
     setGridColumns('repeat(auto-fill, minmax(250px, 1fr))');
-  };
+    setSelectedGrid('Grid4');
+  }
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
@@ -325,14 +330,15 @@ function Products({ appliedFilters }) {
 
 return (
   <div>
-    <div className="grid-icons">
-          <img className='Grid2' src={grid2} onClick={switchTo2x2Grid}/>
-          <img className='Grid3' src={grid3} onClick={switchTo3x3Grid}/>
-          <img className='Grid4' src={grid4} onClick={switchTo4x4Grid}/>
-        </div>
-      <div className='ProductsList' style={{ gridTemplateColumns: gridColumns }}>{shoeCards}</div>
-      <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={handlePageChange} />
+  <div className="grid-icons">
+    <img className={selectedGrid === 'Grid2' ? 'Grid2 selected' : 'Grid2'} src={grid2} onClick={switchTo2x2Grid} />
+    <img className={selectedGrid === 'Grid3' ? 'Grid3 selected' : 'Grid3'} src={grid3} onClick={switchTo3x3Grid} />
+    <img className={selectedGrid === 'Grid4' ? 'Grid4 selected' : 'Grid4'} src={grid4} onClick={switchTo4x4Grid} />
   </div>
+  <p className="total-products">Total Products: {filteredShoes.length}</p>
+  <div className='ProductsList' style={{ gridTemplateColumns: gridColumns }}>{shoeCards}</div>
+  <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={handlePageChange} />
+</div>
         
 );
 }
