@@ -35,15 +35,6 @@
     text-align: center;
 }
 
-.ProductsList {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 0 30px;
-    justify-content: center;
-}
-
-
 .pagination {
     display: flex;
     justify-content: center;
@@ -79,15 +70,15 @@
 }
 
 .Grid2.selected {
-    border: 2px solid blue; /* Add your selected grid styling here */
+    border: 4px solid #ae7736; /* Add your selected grid styling here */
   }
   
   .Grid3.selected {
-    border: 2px solid blue; /* Add your selected grid styling here */
+    border: 4px solid #ae7736; /* Add your selected grid styling here */
   }
   
   .Grid4.selected {
-    border: 2px solid blue; /* Add your selected grid styling here */
+    border: 4px solid #ae7736; /* Add your selected grid styling here */
   }
 .Grid2{
     width: 70px;
@@ -104,9 +95,18 @@
 .grid-icons{
     text-align: center;
     place-self: center;
+    padding-top: 40px;
 }
 .grid-icons > img{
     cursor: pointer;
     margin-left: 40px;
     margin-right: 40px;
+}
+
+.ProductsList {
+    display: grid;
+    gap: 20px;
+    padding: 0 10px; /* Adjust the padding for smaller screens */
+    justify-content: center;
+    grid-template-columns: var(--grid-columns, repeat(auto-fill, minmax(300px, 1fr)));
 }

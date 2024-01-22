@@ -272,19 +272,22 @@ function Products({ appliedFilters }) {
   ];
 
   const [selectedGrid, setSelectedGrid] = useState('Grid3'); // Default selected grid
+  
+  const [gridColumns, setGridColumns] = useState(getInitialGridColumns('Grid3'));
+  
 
   const switchTo2x2Grid = () => {
-    setGridColumns('repeat(auto-fill, minmax(500px, 1fr))');
+    setGridColumns('repeat(2, 1fr)'); // 2x2 grid
     setSelectedGrid('Grid2');
   };
 
   const switchTo3x3Grid = () => {
-    setGridColumns('repeat(auto-fill, minmax(400px, 1fr))');
+    setGridColumns('repeat(3, 1fr)'); // 3x3 grid
     setSelectedGrid('Grid3');
   };
 
   const switchTo4x4Grid = () => {
-    setGridColumns('repeat(auto-fill, minmax(250px, 1fr))');
+    setGridColumns('repeat(4, 1fr)'); // 4x4 grid
     setSelectedGrid('Grid4');
   }
 
@@ -309,8 +312,6 @@ function Products({ appliedFilters }) {
 
   const currentShoes = filteredShoes.slice(startIndex, endIndex);
 
-
-  const [gridColumns, setGridColumns] = useState('repeat(auto-fill, minmax(400px, 1 fr))');
   
 
   // Map through the filtered products
@@ -329,18 +330,31 @@ function Products({ appliedFilters }) {
 
 
 return (
-  <div>
-  <div className="grid-icons">
-    <img className={selectedGrid === 'Grid2' ? 'Grid2 selected' : 'Grid2'} src={grid2} onClick={switchTo2x2Grid} />
-    <img className={selectedGrid === 'Grid3' ? 'Grid3 selected' : 'Grid3'} src={grid3} onClick={switchTo3x3Grid} />
-    <img className={selectedGrid === 'Grid4' ? 'Grid4 selected' : 'Grid4'} src={grid4} onClick={switchTo4x4Grid} />
-  </div>
-  <p className="total-products">Total Products: {filteredShoes.length}</p>
-  <div className='ProductsList' style={{ gridTemplateColumns: gridColumns }}>{shoeCards}</div>
-  <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={handlePageChange} />
-</div>
+    <div>
+      <div className="grid-icons">
+        <img className={selectedGrid === 'Grid2' ? 'Grid2 selected' : 'Grid2'} src={grid2} onClick={switchTo2x2Grid} />
+        <img className={selectedGrid === 'Grid3' ? 'Grid3 selected' : 'Grid3'} src={grid3} onClick={switchTo3x3Grid} />
+        <img className={selectedGrid === 'Grid4' ? 'Grid4 selected' : 'Grid4'} src={grid4} onClick={switchTo4x4Grid} />
+      </div>
+      <p className="total-products">Total Products: {filteredShoes.length}</p>
+      <div className='ProductsList' style={{ gridTemplateColumns: gridColumns }}>{shoeCards}</div>
+      <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={handlePageChange} />
+    </div>
         
 );
+}
+
+function getInitialGridColumns(selectedGrid) {
+  switch (selectedGrid) {
+    case 'Grid2':
+      return 'repeat(2, 1fr)';
+    case 'Grid3':
+      return 'repeat(3, 1fr)';
+    case 'Grid4':
+      return 'repeat(4, 1fr)';
+    default:
+      return 'repeat(3, 1fr)'; // Default to 3x3 grid
+  }
 }
 
 export default Products;

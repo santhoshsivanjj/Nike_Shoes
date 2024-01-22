@@ -4,6 +4,7 @@ import ReactSlider from "react-slider";
 import { useEffect } from "react";
 
 
+
 function Filter({ applyFilters }) {
   const [isFilterVisible, setFilterVisible] = useState(false);
   const [priceRange, setPriceRange] = useState(() => {
@@ -68,7 +69,13 @@ function Filter({ applyFilters }) {
       colors: selectedColors,
     };
     applyFilters(filters);
+    //closeFilterSection(); // Close the filter section after applying filters
   }
+
+  function closeFilterSection() {
+    setFilterVisible(false);
+  }
+  
 
   // Apply filters when selectedSizes or selectedColors change
   useEffect(() => {
@@ -92,6 +99,9 @@ return (
           <input placeholder="Search for the Product Title" value={titleFilter}
               onChange={handleTitleChange}
             />
+            <button className="ApplyFiltersButton" onClick={closeFilterSection}>
+            Apply Filters
+          </button>
         </div>
         <div className="PriceFilter">
             <h3 className="FilterHeading">By Price</h3>
@@ -108,7 +118,7 @@ return (
             <p>Price: ${priceRange.min} - ${priceRange.max}</p>
           </div>
 
-        <div className="SizeFilter">
+          <div className="SizeFilter">
             <h3 className="FilterHeading">By Size</h3>
             <div className="HeadingBar"></div>
 
@@ -174,7 +184,7 @@ return (
 
           </div>
 
-        <div className="ColorFilter">
+          <div className="ColorFilter">
           <h3 className="FilterHeading">By Color</h3>
           <div className="HeadingBar"></div>
 
@@ -239,8 +249,11 @@ return (
                 </label>
               </div>
           </div>
-          
+            
         </div>
+
+
+
       </div>
       )}
     </div>
