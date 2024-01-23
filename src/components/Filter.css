@@ -1,11 +1,9 @@
 .FilterSection{
-    width: 85%; 
+    width: 90%; 
     border-radius: 15px;
-    padding: 10px;
-    margin: 20px;
+    padding: 15px;
+    margin: auto;
     box-shadow: 10px 10px 15px 12px grey;
-    position: relative;
-    left: 70px;
     display: flex;
 }.TitleFilter{
     width: 30%;
@@ -43,6 +41,7 @@ button{
     border: solid 1px;
     border-radius: 2px;
     cursor: pointer;
+    display: block;
 }
 .TitleFilter > input{
     padding: 10px 5px;

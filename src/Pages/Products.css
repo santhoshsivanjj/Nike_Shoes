@@ -96,6 +96,7 @@
     text-align: center;
     place-self: center;
     padding-top: 40px;
+    padding-right: 160px;
 }
 .grid-icons > img{
     cursor: pointer;
